@@ -1,0 +1,697 @@
+.card {
+    background: var(--color-fondo-card);
+    padding: 1.5rem;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    margin: 2rem auto;
+    max-width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin: 0 auto;
+    text-align: center;
+}
+
+button {
+    padding: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.288);
+    border-radius: 8px;
+    color: white;
+    background-color: grey;
+    cursor: pointer;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem auto;
+}
+
+button {
+    padding: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.288);
+    border-radius: 8px;
+    color: white;
+    background-color: grey;
+    cursor: pointer;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem auto;
+}
+
+.btn-back {
+    background: #1e293b;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+}
+
+.btn-back:hover {
+    background: #334155;
+}
+
+.btn-cargar-alumno {
+    background: var(--color-btn-secundario);
+    border: none;
+    height: 35px;
+    width: 100%;
+    max-width: 290px;
+    padding: 0 1rem;
+    border-radius: 10px;
+    color: var(--color-btn-letra);
+    cursor: pointer;
+    transition: 0.2s;
+    margin: 0;
+    margin: 0;
+}
+
+.btn-cargar-alumno:hover {
+    transform: scale(1.05);
+}
+
+.action-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.btn-cerrar {
+    margin-top: 1.5rem;
+    background-color: #ef4444;
+    border: none;
+    width: 100%;
+}
+
+.btn-cerrar:hover {
+    background-color: #dc2626;
+}
+
+.modal-body-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    background: #111827;
+}
+
+.seccion-detalles-card {
+    background: #1f2937 !important;
+    border: 1px solid #374151 !important;
+    border-radius: 12px !important;
+    padding: 1.25rem !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.seccion-titulo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #374151;
+    padding-bottom: 0.5rem;
+}
+
+.seccion-titulo h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #60a5fa;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.seccion-titulo i {
+    font-size: 1.1rem;
+}
+
+.datos-estudiante-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.dato-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.dato-item.full-width {
+    grid-column: span 2;
+}
+
+.dato-item .label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #9ca3af;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.dato-item .valor {
+    font-size: 0.95rem;
+    color: #f3f4f6;
+    font-weight: 500;
+}
+
+.dato-item .valor.highlight {
+    color: #f59e0b;
+    font-weight: 700;
+}
+
+.dato-item .valor.email-link {
+    color: #38bdf8;
+    font-family: monospace;
+}
+
+.tabla-responsive-container {
+    overflow-x: auto;
+    border-radius: 8px;
+    border: 1px solid #374151;
+}
+
+.tabla-academic-premium {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.tabla-academic-premium th {
+    background: #2d3748;
+    color: #9ca3af;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+.tabla-academic-premium td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #374151;
+    color: #e5e7eb;
+}
+
+.tabla-academic-premium tr:last-child td {
+    border-bottom: none;
+}
+
+.nota-calificacion {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #ef4444;
+}
+
+.nota-calificacion.nota-alta {
+    color: #10b981;
+}
+
+.badge-condicion {
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.badge-condicion.aprobado {
+    background: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+}
+
+.badge-condicion.reprobado {
+    background: rgba(239, 68, 68, 0.2);
+    color: #f87171;
+}
+
+.aviso-sin-registros {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(59, 130, 246, 0.1) !important;
+    border: 1px solid rgba(59, 130, 246, 0.3) !important;
+    padding: 1rem;
+    border-radius: 8px;
+    color: #93c5fd;
+}
+
+.aviso-sin-registros i {
+    font-size: 1.3rem;
+}
+
+.aviso-sin-registros p {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.banner-baja-logica {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(239, 68, 68, 0.15);
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    color: #f87171;
+}
+
+.banner-baja-logica h4 {
+    margin: 0 0 0.15rem 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.banner-baja-logica p {
+    margin: 0;
+    font-size: 0.75rem;
+    opacity: 0.9;
+}
+
+::ng-deep .tabla-alumnos .p-datatable-thead > tr > th {
+    background-color: #1e293b;
+    color: white;
+    border-color: #334155;
+    padding: 0.6rem;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+::ng-deep .tabla-alumnos .p-datatable-tbody > tr > td {
+    background-color: #0f172a;
+    color: #e2e8f0;
+    border-color: #334155;
+    padding: 0.6rem;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+::ng-deep .tabla-alumnos .p-datatable-wrapper {
+    overflow-x: auto !important;
+}
+
+::ng-deep .tabla-alumnos table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+::ng-deep .p-datatable .p-datatable-thead > tr > th {
+    background-color: #1e293b;
+    color: white;
+    border-color: #334155;
+    padding: 0.5rem;
+}
+
+::ng-deep .p-datatable .p-datatable-tbody > tr > td {
+    background-color: #0f172a;
+    color: #e2e8f0;
+    border-color: #334155;
+    padding: 0.5rem;
+}
+
+::ng-deep body .p-paginator {
+    background: #0f172a !important;
+    color: white !important;
+    border: none !important;
+    border-top: 1px solid #334155 !important;
+    padding: 0.8rem !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.2rem !important;
+}
+
+::ng-deep body .p-paginator .p-paginator-pages {
+    display: flex !important;
+    align-items: center !important;
+}
+
+::ng-deep body .p-paginator .p-paginator-page,
+::ng-deep body .p-paginator .p-paginator-first,
+::ng-deep body .p-paginator .p-paginator-prev,
+::ng-deep body .p-paginator .p-paginator-next,
+::ng-deep body .p-paginator .p-paginator-last {
+    background: #1e293b !important;
+    color: #e2e8f0 !important;
+    border: 1px solid #334155 !important;
+    border-radius: 8px !important;
+    min-width: 2.2rem !important;
+    height: 2.2rem !important;
+    margin: 0 0.15rem !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    transition: background 0.2s, color 0.2s !important;
+}
+
+::ng-deep body .p-paginator .p-paginator-page:not(.p-highlight):not(.p-disabled):hover,
+::ng-deep body .p-paginator .p-paginator-first:not(.p-disabled):hover,
+::ng-deep body .p-paginator .p-paginator-prev:not(.p-disabled):hover,
+::ng-deep body .p-paginator .p-paginator-next:not(.p-disabled):hover,
+::ng-deep body .p-paginator .p-paginator-last:not(.p-disabled):hover {
+    background: #334155 !important;
+    color: white !important;
+    border-color: #475569 !important;
+}
+
+::ng-deep body .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+    background: #3b82f6 !important;
+    color: #ffffff !important;
+    border-color: #2563eb !important;
+    font-weight: 700 !important;
+}
+
+::ng-deep body .p-paginator .p-disabled {
+    opacity: 0.3 !important;
+    background: #1e293b !important;
+    cursor: not-allowed !important;
+}
+
+::ng-deep body .p-paginator .p-dropdown,
+::ng-deep body .p-paginator .p-dropdown.p-component {
+    background: #1e293b !important;
+    border: 1px solid #334155 !important;
+    border-radius: 8px !important;
+    width: 2.2rem !important;
+    height: 2.2rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    transition: background 0.2s, border-color 0.2s !important;
+    box-sizing: border-box !important;
+}
+
+::ng-deep body .p-paginator .p-dropdown:hover {
+    background: #334155 !important;
+    border-color: #475569 !important;
+}
+
+::ng-deep body .p-paginator .p-dropdown .p-dropdown-label {
+    color: white !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    text-align: center !important;
+}
+
+::ng-deep body .p-paginator .p-dropdown-trigger {
+    display: none !important;
+}
+
+::ng-deep body .p-dropdown-panel {
+    background: #1e293b !important;
+    border: 1px solid #334155 !important;
+    border-radius: 8px !important;
+}
+
+::ng-deep body .p-dropdown-panel .p-dropdown-items .p-dropdown-item {
+    color: white !important;
+    padding: 0.5rem 1rem !important;
+}
+
+::ng-deep body .p-dropdown-panel .p-dropdown-items .p-dropdown-item:hover {
+    background: #334155 !important;
+}
+
+::ng-deep body .p-paginator .p-paginator-rpp-options {
+    margin: 0 0 0 0.15rem !important;
+    display: inline-flex !important;
+}
+
+::ng-deep body .p-paginator .p-select,
+::ng-deep body .p-paginator .p-select.p-component {
+    min-width: 4.25rem !important;
+    height: 2.2rem !important;
+    background: #1e293b !important;
+    border: 1px solid #334155 !important;
+    border-radius: 8px !important;
+    color: #e2e8f0 !important;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.28) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    overflow: visible !important;
+}
+
+::ng-deep body .p-paginator .p-select:not(.p-disabled):hover,
+::ng-deep body .p-paginator .p-select.p-focus {
+    background: #334155 !important;
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.22) !important;
+}
+
+::ng-deep body .p-paginator .p-select-label {
+    color: #f8fafc !important;
+    font-size: 0.9rem !important;
+    font-weight: 700 !important;
+    padding: 0.4rem 0.25rem 0.4rem 0.65rem !important;
+}
+
+::ng-deep body .p-paginator .p-select-dropdown {
+    width: 1.55rem !important;
+    color: #93c5fd !important;
+}
+
+::ng-deep body .p-select-overlay {
+    background: #1e293b !important;
+    border: 1px solid #334155 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.28) !important;
+    overflow: hidden !important;
+    z-index: 2000 !important;
+}
+
+::ng-deep body .p-select-list {
+    padding: 0.3rem !important;
+}
+
+::ng-deep body .p-select-option {
+    color: #e2e8f0 !important;
+    border-radius: 6px !important;
+    padding: 0.55rem 0.8rem !important;
+    font-weight: 600 !important;
+}
+
+::ng-deep body .p-select-option:not(.p-select-option-selected):not(.p-disabled):hover {
+    background: #334155 !important;
+    color: #ffffff !important;
+}
+
+::ng-deep body .p-select-option.p-select-option-selected {
+    background: #334155 !important;
+    color: #ffffff !important;
+}
+
+::ng-deep .p-dialog.custom-modal-detalles {
+    background: #111827 !important;
+    color: #f3f4f6 !important;
+    border-radius: 16px !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7) !important;
+    border: 1px solid #374151 !important;
+    width: 90% !important;
+    max-width: 600px !important;
+    overflow: hidden !important;
+}
+
+::ng-deep .custom-modal-detalles .p-dialog-header {
+    background: #1f2937 !important;
+    border-bottom: 1px solid #374151 !important;
+    padding: 1.25rem 1.5rem !important;
+    color: #f9fafb !important;
+}
+
+::ng-deep .custom-modal-detalles .p-dialog-title {
+    font-size: 1.15rem !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.01em;
+}
+
+::ng-deep .custom-modal-detalles .p-dialog-header-icon {
+    color: #9ca3af !important;
+    background: transparent !important;
+    border-radius: 50% !important;
+    width: 2.2rem !important;
+    height: 2.2rem !important;
+    transition: all 0.2s ease;
+}
+
+::ng-deep .custom-modal-detalles .p-dialog-header-icon:hover {
+    color: #ffffff !important;
+    background: #374151 !important;
+}
+
+::ng-deep .custom-modal-detalles .p-dialog-content {
+    background: #111827 !important;
+    color: #e5e7eb !important;
+    padding: 1.5rem !important;
+}
+
+@media (max-width: 768px) {
+    .card {
+        max-width: 95%;
+        height: auto;
+        height: auto;
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .title {
+        font-size: 1.8rem;
+        margin-top: 0.25rem;
+    }
+
+    .btn-back,
+    .btn-cargar-alumno {
+        position: static;
+        width: 100%;
+    }
+
+    .datos-estudiante-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dato-item.full-width {
+        grid-column: span 1;
+    }
+
+    ::ng-deep .p-datatable-wrapper {
+        overflow-x: auto;
+        width: 100%;
+        display: block;
+    }
+
+    ::ng-deep body .p-paginator {
+        padding: 0.5rem 0.25rem !important;
+        flex-wrap: nowrap !important;
+        justify-content: center !important;
+        gap: 0.15rem !important;
+        overflow-x: auto !important;
+        scrollbar-width: none !important;
+    }
+
+    ::ng-deep body .p-paginator::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    ::ng-deep body .p-paginator .p-paginator-first,
+    ::ng-deep body .p-paginator .p-paginator-last {
+        display: inline-flex !important;
+    }
+
+    ::ng-deep body .p-paginator .p-paginator-page,
+    ::ng-deep body .p-paginator .p-paginator-first,
+    ::ng-deep body .p-paginator .p-paginator-last,
+    ::ng-deep body .p-paginator .p-paginator-prev,
+    ::ng-deep body .p-paginator .p-paginator-next {
+        min-width: 1.7rem !important;
+        height: 1.7rem !important;
+        margin: 0 0.04rem !important;
+        font-size: 0.75rem !important;
+        border-radius: 6px !important;
+    }
+
+    ::ng-deep body .p-paginator .p-dropdown,
+    ::ng-deep body .p-paginator .p-dropdown.p-component {
+        width: 1.8rem !important;
+        height: 1.8rem !important;
+        font-size: 0.8rem !important;
+    }
+
+    ::ng-deep body .p-paginator .p-dropdown .p-dropdown-label {
+        padding: 0.2rem 0.5rem !important;
+    }
+
+    ::ng-deep body .p-paginator .p-select,
+    ::ng-deep body .p-paginator .p-select.p-component {
+        min-width: 3.6rem !important;
+        height: 1.8rem !important;
+        flex: 0 0 auto !important;
+    }
+
+    ::ng-deep body .p-paginator .p-select-label {
+        padding: 0.3rem 0.15rem 0.3rem 0.5rem !important;
+        font-size: 0.78rem !important;
+    }
+
+    ::ng-deep body .p-paginator .p-select-dropdown {
+        width: 1.25rem !important;
+    }
+
+    ::ng-deep body .p-paginator .p-paginator-rpp-options {
+        margin-left: 0.15rem !important;
+        flex: 0 0 auto !important;
+    }
+}
+
+@media (max-width: 426px) {
+    ::ng-deep body .p-paginator .p-paginator-first,
+    ::ng-deep body .p-paginator .p-paginator-last {
+        display: none !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .title {
+        margin-left: 2.5rem;
+    }
+
+    ::ng-deep body .p-paginator {
+        justify-content: flex-start !important;
+    }
+}
